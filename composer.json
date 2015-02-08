@@ -10,5 +10,8 @@
 		"psr-4": {
 			"JeremyHarris\\App\\": "src/"
 		}
+	},
+	"require": {
+		"league/commonmark": "~0.6"
 	}
 }

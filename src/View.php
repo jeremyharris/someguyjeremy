@@ -2,6 +2,8 @@
 
 namespace JeremyHarris\App;
 
+use League\CommonMark\CommonMarkConverter;
+
 /**
  * Simple view class
  */
@@ -70,10 +72,26 @@ class View
      */
     public function render()
     {
+        if ($this->isMarkdown()) {
+            $converter = new CommonMarkConverter();
+            return $converter->convertToHtml(file_get_contents($this->filename));
+        }
         ob_start();
         extract($this->vars);
         require $this->filename;
         return ob_get_clean();
+    }
+
+    /**
+     * Checks for markdown extensions in the filename
+     *
+     * @return bool
+     */
+    public function isMarkdown()
+    {
+        $markdownExts = array('md', 'markdown');
+        $ext = pathinfo($this->filename, \PATHINFO_EXTENSION);
+        return in_array($ext, $markdownExts);
     }
 
 

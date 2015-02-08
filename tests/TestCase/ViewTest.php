@@ -77,4 +77,38 @@ class ViewTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $result);
     }
 
+    /**
+     * testRenderMarkdownView
+     *
+     * @return void
+     */
+    public function testRenderMarkdownView()
+    {
+        $view = new View(TEST_APP . DS . 'markdown.md');
+        $result = $view->render();
+
+        $h1 = '/<h1>(.+)<\/h1>/';
+        $p = '/<p>(.+)<code>(.+)<\/code><\/p>/';
+        $ul = '/<ul>(.*)<\/ul>/s';
+        $li = '/<li>(.+)<\/li>/';
+
+        $this->assertRegExp($h1, $result);
+        $this->assertRegExp($p, $result);
+        $this->assertRegExp($ul, $result);
+        $this->assertRegExp($li, $result);
+    }
+
+    /**
+     * testIsMarkdown
+     *
+     * @return void
+     */
+    public function testIsMarkdown()
+    {
+        $this->assertFalse($this->View->isMarkdown());
+
+        $mdView = new View(TEST_APP . DS . 'markdown.md');
+        $this->assertTrue($mdView->isMarkdown());
+    }
+
 }
