@@ -30,7 +30,8 @@ class View
      * @param string $filename Full path to view file
      * @throws \Exception
      */
-    public function __construct($filename) {
+    public function __construct($filename)
+    {
         if (!file_exists($filename)) {
             throw new \Exception(sprintf('%s does not exist', $filename));
         }
@@ -58,8 +59,7 @@ class View
      */
     public function get($var)
     {
-        if (!array_key_exists($var, $this->vars))
-        {
+        if (!array_key_exists($var, $this->vars)) {
             throw new \OutOfBoundsException(sprintf('%s has not been set', $var));
         }
         return $this->vars[$var];
@@ -93,6 +93,4 @@ class View
         $ext = pathinfo($this->filename, \PATHINFO_EXTENSION);
         return in_array($ext, $markdownExts);
     }
-
-
 }

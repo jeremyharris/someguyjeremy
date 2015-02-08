@@ -110,5 +110,4 @@ class ViewTest extends \PHPUnit_Framework_TestCase
         $mdView = new View(TEST_APP . DS . 'markdown.md');
         $this->assertTrue($mdView->isMarkdown());
     }
-
 }
