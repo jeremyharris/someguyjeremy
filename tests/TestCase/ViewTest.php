@@ -17,7 +17,7 @@ class ViewTest extends \PHPUnit_Framework_TestCase
     public function setUp()
     {
         parent::setUp();
-        $this->View = new View(TEST_APP . DS . 'html.php');
+        $this->View = new View(TEST_APP . DS . 'views' . DS . 'html.php');
     }
 
     /**
@@ -84,7 +84,7 @@ class ViewTest extends \PHPUnit_Framework_TestCase
      */
     public function testRenderMarkdownView()
     {
-        $view = new View(TEST_APP . DS . 'markdown.md');
+        $view = new View(TEST_APP . DS . 'views' . DS . 'markdown.md');
         $result = $view->render();
 
         $h1 = '/<h1>(.+)<\/h1>/';
@@ -107,7 +107,7 @@ class ViewTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertFalse($this->View->isMarkdown());
 
-        $mdView = new View(TEST_APP . DS . 'markdown.md');
+        $mdView = new View(TEST_APP . DS . 'views' . DS . 'markdown.md');
         $this->assertTrue($mdView->isMarkdown());
     }
 }
