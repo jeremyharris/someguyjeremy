@@ -124,6 +124,18 @@ class Build
             $contents = $this->renderView(new View($this->site . DIRECTORY_SEPARATOR . $viewPath . $file));
             $this->addFileToBuild($newFilename, $contents);
         }
+
+        $jsPath = self::ASSET_PATH . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR;
+        $scripts = $this->getFileTree($this->site . DIRECTORY_SEPARATOR . $jsPath);
+        array_walk($scripts, [$this, 'prependDirectory'], $jsPath);
+        $concatenated = $this->concatFiles($scripts);
+        $this->addFileToBuild('scripts.js', $concatenated);
+
+        $cssPath = self::ASSET_PATH . DIRECTORY_SEPARATOR . 'css' . DIRECTORY_SEPARATOR;
+        $styles = $this->getFileTree($this->site . DIRECTORY_SEPARATOR . $cssPath);
+        array_walk($styles, [$this, 'prependDirectory'], $cssPath);
+        $concatenated = $this->concatFiles($styles);
+        $this->addFileToBuild('styles.css', $concatenated);
     }
 
     /**
@@ -179,9 +191,19 @@ class Build
         return $files;
     }
 
-    public function concatAssets()
+    /**
+     * Concatenates an array of files (usually assets)
+     *
+     * @param array $paths
+     * @return string
+     */
+    public function concatFiles(array $paths)
     {
-        // concat css and js
+        $concatenated = '';
+        foreach ($paths as $path) {
+            $concatenated .= file_get_contents($this->site . DIRECTORY_SEPARATOR . $path) . PHP_EOL;
+        }
+        return $concatenated;
     }
 
     /**
@@ -192,5 +214,18 @@ class Build
     public function useLayout($layout)
     {
         $this->layout = $layout;
+    }
+
+    /**
+     * Prepends a directory to a path (used by `array_walk`)
+     *
+     * @param  string $path      Path
+     * @param  string $key       Array key value
+     * @param  string $directory Directory
+     * @return void
+     */
+    public function prependDirectory(&$path, $key, $directory)
+    {
+        $path = rtrim($directory, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . ltrim($path, DIRECTORY_SEPARATOR);
     }
 }

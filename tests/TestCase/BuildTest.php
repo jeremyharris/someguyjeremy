@@ -80,6 +80,9 @@ class BuildTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue(file_exists($this->testBuildPath . DS . 'html.html'));
         $this->assertTrue(file_exists($this->testBuildPath . DS . 'markdown.html'));
 
+        $this->assertTrue(file_exists($this->testBuildPath . DS . 'scripts.js'));
+        $this->assertTrue(file_exists($this->testBuildPath . DS . 'styles.css'));
+
         $this->Build->useLayout('missing');
         $this->Build->build();
 
@@ -104,5 +107,35 @@ class BuildTest extends \PHPUnit_Framework_TestCase
             'subdir' . DS . 'article.php',
         ];
         $this->assertEquals($expected, $result);
+    }
+
+    /**
+     * testConcatFiles
+     *
+     * @return void
+     */
+    public function testConcatFiles()
+    {
+        $jsPath = 'assets' . DS . 'js';
+        $files = $this->Build->getFileTree(TEST_APP . DS . $jsPath);
+        array_walk($files, [$this->Build, 'prependDirectory'], $jsPath);
+        $result = $this->Build->concatFiles($files);
+
+        $this->assertRegExp('/alert/', $result);
+        $this->assertRegExp('/\/\/ hi/', $result);
+    }
+
+    /**
+     * testPrependDirectory
+     *
+     * @return void
+     */
+    public function testPrependDirectory()
+    {
+        $ds = DIRECTORY_SEPARATOR;
+        $path = "{$ds}some{$ds}file.txt";
+        $this->Build->prependDirectory($path, 0, "{$ds}directory{$ds}");
+        $expected = "{$ds}directory{$ds}some{$ds}file.txt";
+        $this->assertEquals($expected, $path);
     }
 }
