@@ -89,7 +89,7 @@ class View
      */
     public function isMarkdown()
     {
-        $markdownExts = array('md', 'markdown');
+        $markdownExts = ['md', 'markdown'];
         $ext = pathinfo($this->filename, \PATHINFO_EXTENSION);
         return in_array($ext, $markdownExts);
     }
