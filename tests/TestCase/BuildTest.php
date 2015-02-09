@@ -83,6 +83,9 @@ class BuildTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue(file_exists($this->testBuildPath . DS . 'scripts.js'));
         $this->assertTrue(file_exists($this->testBuildPath . DS . 'styles.css'));
 
+        $html = file_get_contents($this->testBuildPath . DS . 'html.html');
+        $this->assertRegExp('/<html/', $html);
+
         $this->Build->useLayout('missing');
         $this->Build->build();
 
