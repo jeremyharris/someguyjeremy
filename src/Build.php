@@ -55,7 +55,8 @@ use JeremyHarris\App\View;
  * using `SITE_TARGET/layout.php` as the wrapping view, and then placed into
  * `BUILD_TARGET` root.
  */
-class Build {
+class Build
+{
 
     const VIEW_PATH = 'views';
     const ASSET_PATH = 'assets';
@@ -76,6 +77,13 @@ class Build {
     protected $build = null;
 
     /**
+     * Layout to use when rendiner views during build
+     *
+     * @var string
+     */
+    protected $layout = 'layout.php';
+
+    /**
      * Constructor
      *
      * @param string $siteTarget  Site target
@@ -84,12 +92,10 @@ class Build {
      */
     public function __construct($siteTarget, $buildTarget)
     {
-        if (!is_dir($buildTarget) || !is_writable($buildTarget))
-        {
+        if (!is_dir($buildTarget) || !is_writable($buildTarget)) {
             throw new \Exception(sprintf('%s is not a directory that can be used to build', $buildTarget));
         }
-        if (!is_dir($siteTarget))
-        {
+        if (!is_dir($siteTarget)) {
             throw new \Exception(sprintf('%s is not a valid site target', $siteTarget));
         }
         $this->site = $siteTarget;
@@ -108,6 +114,15 @@ class Build {
         foreach ($webroot as $file) {
             $contents = file_get_contents($this->site . DIRECTORY_SEPARATOR . $webrootPath . $file);
             $this->addFileToBuild($file, $contents);
+        }
+
+        $viewPath = self::VIEW_PATH . DIRECTORY_SEPARATOR;
+        $views = $this->getFileTree($this->site . DIRECTORY_SEPARATOR . $viewPath);
+        foreach ($views as $file) {
+            $viewFile = new \SplFileInfo($file);
+            $newFilename = str_replace($viewFile->getExtension(), 'html', $file);
+            $contents = $this->renderView(new View($this->site . DIRECTORY_SEPARATOR . $viewPath . $file));
+            $this->addFileToBuild($newFilename, $contents);
         }
     }
 
@@ -128,9 +143,23 @@ class Build {
         file_put_contents($buildPath, $contents);
     }
 
+    /**
+     * Tries rendering the view within the layout, if that fails (i.e., no layout
+     * is defined) it just returns the rendered view
+     *
+     * @param View $view View to render
+     * @return string
+     */
     public function renderView(View $view)
     {
-        // wrap in layout
+        $viewContents = $view->render();
+        try {
+            $layout = new View($this->site . $this->layout);
+            $layout->set('content', $viewContents);
+            $viewContents = $layout->render();
+        } catch (\Exception $e) {
+        }
+        return $viewContents;
     }
 
     /**
@@ -155,4 +184,13 @@ class Build {
         // concat css and js
     }
 
+    /**
+     * Sets the layout to use
+     *
+     * @param string $layout Relative path to layout
+     */
+    public function useLayout($layout)
+    {
+        $this->layout = $layout;
+    }
 }

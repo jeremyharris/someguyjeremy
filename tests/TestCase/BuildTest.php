@@ -62,6 +62,11 @@ class BuildTest extends \PHPUnit_Framework_TestCase
         new Build(TEST_APP, 'invalid target');
     }
 
+    /**
+     * testBuild
+     *
+     * @return void
+     */
     public function testBuild()
     {
         $this->Build->build();
@@ -69,6 +74,19 @@ class BuildTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue(file_exists($this->testBuildPath . DS . 'permanent'));
         $this->assertTrue(file_exists($this->testBuildPath . DS . 'permanent' . DS . 'empty'));
         $this->assertTrue(file_exists($this->testBuildPath . DS . 'robots.txt'));
+
+        $this->assertTrue(file_exists($this->testBuildPath . DS . 'subdir'));
+        $this->assertTrue(file_exists($this->testBuildPath . DS . 'subdir' . DS . 'article.html'));
+        $this->assertTrue(file_exists($this->testBuildPath . DS . 'html.html'));
+        $this->assertTrue(file_exists($this->testBuildPath . DS . 'markdown.html'));
+
+        $this->Build->useLayout('missing');
+        $this->Build->build();
+
+        $this->assertTrue(file_exists($this->testBuildPath . DS . 'subdir'));
+        $this->assertTrue(file_exists($this->testBuildPath . DS . 'subdir' . DS . 'article.html'));
+        $this->assertTrue(file_exists($this->testBuildPath . DS . 'html.html'));
+        $this->assertTrue(file_exists($this->testBuildPath . DS . 'markdown.html'));
     }
 
     /**
@@ -87,6 +105,4 @@ class BuildTest extends \PHPUnit_Framework_TestCase
         ];
         $this->assertEquals($expected, $result);
     }
-
 }
-
