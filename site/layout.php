@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>someguyjeremy.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/scripts.js"></script>
 </head>
 <body>
     <header>
@@ -13,8 +13,8 @@
         <h1>Jeremy Harris <small>Another programmer.</small></h1>
     </header>
     <nav>
-        <a href="about.html">About</a>
-        <a href="archive.html">Blog</a>
+        <a href="/about.html">About</a>
+        <a href="/archive.html">Blog</a>
     </nav>
     <section class="container">
         <?php echo $content; ?>
