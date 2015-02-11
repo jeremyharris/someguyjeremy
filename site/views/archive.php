@@ -11,6 +11,8 @@ foreach ($directories as $dir) {
     $years[] = $dir->getBasename();
 }
 
+$years = array_reverse($years);
+
 $rows = array_chunk($years, 3);
 
 foreach ($rows as $row) {
