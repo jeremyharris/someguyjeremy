@@ -78,3 +78,30 @@ nav a {
 	display: block;
 	padding: 10px;
 }
+
+section {
+	margin-bottom: 50px;
+}
+
+.archive .year h2 {
+	text-align: center;
+}
+
+.archive .month {
+	margin-bottom: 10px;
+}
+
+.archive .month h3 {
+	float: left;
+	margin-top: 0;
+}
+
+.archive .month a {
+	display: block;
+	margin-bottom: 5px;
+	margin-left: 40px;
+}
+
+.muted {
+	color: #ccc;
+}
