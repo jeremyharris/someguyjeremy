@@ -105,3 +105,19 @@ section {
 .muted {
 	color: #ccc;
 }
+
+strong {
+	font-family: droid_sansbold,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+}
+
+code {
+	padding: .5em;
+	background: #f8f8f8;
+	color: #c7254e;
+}
+
+blockquote {
+	padding: 10px;
+	background: #f8f8f8;
+	border-left: 3px solid #333;
+}
