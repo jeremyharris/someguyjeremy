@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>someguyjeremy.com</title>
+    <title>someguyjeremy.com / <?php echo $title; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/styles.css">
     <script src="/scripts.js"></script>
