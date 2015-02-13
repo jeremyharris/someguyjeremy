@@ -103,13 +103,15 @@ class BuildTest extends \PHPUnit_Framework_TestCase
     public function testGetFileTree()
     {
         $result = $this->Build->getFileTree(TEST_APP . DS . 'views');
-        sort($result);
-        $expected = [
+        $result = array_flip($result);
+        $someExpected = [
             'html.php',
             'markdown.md',
             'subdir' . DS . 'article.php',
         ];
-        $this->assertEquals($expected, $result);
+        foreach ($someExpected as $expected) {
+            $this->assertArrayHasKey($expected, $result);
+        }
     }
 
     /**
