@@ -55,6 +55,7 @@ class Blog
      */
     public function getPosts()
     {
+        ksort($this->posts);
         return $this->posts;
     }
 
