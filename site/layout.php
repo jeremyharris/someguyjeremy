@@ -12,12 +12,13 @@
 </head>
 <body>
     <header>
-        <button><i class="fa fa-list"></i><span class="sr-only">Menu</span></button>
-        <h1><a href="/">Jeremy Harris</a> <small>Programming is art that fights back.</small></h1>
+        <button><i class="fa fa-bars"></i><span class="sr-only">Menu</span></button>
+        <h1><a href="/"><i class="fa fa-terminal"></i> Jeremy Harris</a> <small>Programming is art that fights back.</small></h1>
     </header>
     <nav>
-        <a href="/about.html">About</a>
         <a href="/archive.html">Blog</a>
+        <span class="divider">/</span>
+        <a href="/contact.html">Contact</a>
     </nav>
     <section class="container">
         <?php echo $content; ?>

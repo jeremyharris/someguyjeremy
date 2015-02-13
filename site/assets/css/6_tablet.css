@@ -6,13 +6,19 @@
 
 	header {
 		height: 70px;
-
-		line-height: 70px;
+		padding-left: 20px;
 	}
 
 	header h1 {
+		position: static;
+		width: auto;
+
+		line-height: 70px;
 		font-size: 30px;
-		margin-left: 20px;
+	}
+
+	header h1 i.fa {
+		display: inline;
 	}
 
 	header h1 small {
