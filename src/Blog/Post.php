@@ -62,7 +62,7 @@ class Post
      */
     public function link()
     {
-        return "<a href=\"/$this->year/$this->month/$this->slug.html\">" . $this->title . "</a>";
+        return "<a href=\"/$this->year/$this->month/$this->slug.html\">" . $this->title() . "</a>";
     }
 
     /**
