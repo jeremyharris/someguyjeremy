@@ -24,9 +24,11 @@
 	}
 
 	nav {
-		z-index: 2;
+		z-index: 3;
+		display: inline-block;
 		right: 10px;
 		top: 0px;
+		left: auto;
 
 		background: transparent;
 		border: none;

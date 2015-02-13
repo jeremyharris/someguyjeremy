@@ -1,6 +1,8 @@
 body {
 	font-family: droid_sansregular,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
 	margin-top: 50px;
+
+	color: #333;
 }
 
 h1,
@@ -39,6 +41,15 @@ header h1 {
 
 	font-size: 20px;
 	line-height: 50px;
+}
+
+header h1 a {
+	color: #333;
+}
+
+header h1 a:hover {
+	color: #333;
+	text-decoration: none;
 }
 
 header h1 small {

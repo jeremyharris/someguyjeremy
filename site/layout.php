@@ -13,7 +13,7 @@
 <body>
     <header>
         <button><i class="fa fa-list"></i><span class="sr-only">Menu</span></button>
-        <h1>Jeremy Harris <small>Programming is art that fights back.</small></h1>
+        <h1><a href="/">Jeremy Harris</a> <small>Programming is art that fights back.</small></h1>
     </header>
     <nav>
         <a href="/about.html">About</a>
