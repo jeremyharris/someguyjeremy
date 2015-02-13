@@ -1,0 +1,17 @@
+{
+	"name": "jeremyharris/someguyjeremy",
+	"description": "someguyjeremy.com website builder",
+	"license": "MIT",
+	"type": "project",
+	"require-dev": {
+		"phpunit/phpunit": "~4.4"
+	},
+	"autoload": {
+		"psr-4": {
+			"JeremyHarris\\App\\": "src/"
+		}
+	},
+	"require": {
+		"league/commonmark": "~0.6"
+	}
+}
