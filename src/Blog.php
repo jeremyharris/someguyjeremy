@@ -66,17 +66,18 @@ class Blog
     public function getLatest()
     {
         $reversed = array_reverse($this->posts);
-        $latestYear = $reversed[0];
+        $latestYear = current($reversed);
         $reversedMonths = array_reverse($latestYear);
+        $latestMonth = current($reversedMonths);
 
-        $sorted = usort(
-            $reversedMonths,
+        usort(
+            $latestMonth,
             function($post1, $post2) {
-                return $post1->source()->getMTime() < $post2->source()->getMTime() ? -1 : 1;
+                return $post1->source()->getMTime() > $post2->source()->getMTime() ? -1 : 1;
             }
         );
 
-        return $sorted[0];
+        return $latestMonth[0];
     }
 
     /**
