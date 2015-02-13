@@ -2,7 +2,11 @@
 
 namespace JeremyHarris\App;
 
-use League\CommonMark\CommonMarkConverter;
+use JeremyHarris\App\Application;
+use JeremyHarris\App\Parser\TwitterHandleParser;
+use League\CommonMark\Environment;
+use League\CommonMark\DocParser;
+use League\CommonMark\HtmlRenderer;
 
 /**
  * Simple view class
@@ -73,8 +77,12 @@ class View
     public function render()
     {
         if ($this->isMarkdown()) {
-            $converter = new CommonMarkConverter();
-            return $converter->convertToHtml(file_get_contents($this->filename));
+            $environment = Environment::createCommonMarkEnvironment();
+            $environment->addInlineParser(new TwitterHandleParser());
+            $parser = new DocParser($environment);
+            $htmlRenderer = new HtmlRenderer($environment);
+            $document = $parser->parse(file_get_contents($this->filename));
+            return $htmlRenderer->renderBlock($document);
         }
         ob_start();
         extract($this->vars);
