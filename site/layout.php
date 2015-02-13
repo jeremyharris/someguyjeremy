@@ -16,6 +16,8 @@
         <h1><a href="/"><i class="fa fa-terminal"></i> Jeremy Harris</a> <small>Programming is art that fights back.</small></h1>
     </header>
     <nav>
+        <a href="/">Home</a>
+        <span class="divider">/</span>
         <a href="/archive.html">Blog</a>
         <span class="divider">/</span>
         <a href="/contact.html">Contact</a>
