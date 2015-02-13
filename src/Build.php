@@ -107,7 +107,7 @@ class Build
      *
      * @return void
      */
-    public function build()
+    public function build($force = false)
     {
         $webrootPath = self::WEBROOT_PATH . DIRECTORY_SEPARATOR;
         $webroot = $this->getFileTree($this->site . DIRECTORY_SEPARATOR . $webrootPath);
@@ -122,7 +122,9 @@ class Build
             $viewFile = new \SplFileInfo($file);
             $newFilename = str_replace($viewFile->getExtension(), 'html', $file);
             $contents = $this->renderView(new View($this->site . DIRECTORY_SEPARATOR . $viewPath . $file));
-            $this->addFileToBuild($newFilename, $contents);
+            if ($force || $this->modified($file) === true) {
+                $this->addFileToBuild($newFilename, $contents);
+            }
         }
 
         $jsPath = self::ASSET_PATH . DIRECTORY_SEPARATOR . 'js' . DIRECTORY_SEPARATOR;
@@ -227,5 +229,23 @@ class Build
     public function prependDirectory(&$path, $key, $directory)
     {
         $path = rtrim($directory, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . ltrim($path, DIRECTORY_SEPARATOR);
+    }
+
+    /**
+     * Checks if a view file has been modified
+     *
+     * @param string $filename Path to view file
+     * @return bool
+     */
+    public function modified($filename)
+    {
+        $viewPath = $this->site . DIRECTORY_SEPARATOR . self::VIEW_PATH . DIRECTORY_SEPARATOR;
+        $viewFile = new \SplFileInfo($viewPath . $filename);
+        $buildFilename = str_replace($viewFile->getExtension(), 'html', $filename);
+        if (!file_exists($this->build . DIRECTORY_SEPARATOR . $buildFilename)) {
+            return true;
+        }
+        $buildFile = new \SplFileInfo($this->build . DIRECTORY_SEPARATOR . $buildFilename);
+        return $viewFile->getMTime() > $buildFile->getMTime();
     }
 }
