@@ -55,6 +55,10 @@ class Blog
      */
     public function getPosts()
     {
+        ksort($this->posts);
+        foreach ($this->posts as &$year) {
+            ksort($year);
+        }
         return $this->posts;
     }
 
