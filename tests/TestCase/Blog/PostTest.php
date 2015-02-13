@@ -26,6 +26,10 @@ class PostTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('post', $Post->slug());
         $this->assertEquals($file, $Post->source());
 
+        $link = $Post->link();
+        $this->assertRegExp('/<a/', $link);
+        $this->assertRegExp('/href=\"\/2012\/01\/post\.html\"/', $link);
+
         $filepath = TEST_APP . DS . 'views' . DS . '2012' . DS . '01' . DS . 'post.html';
         $file = new \SplFileObject($filepath);
         $Post = new Post($file);

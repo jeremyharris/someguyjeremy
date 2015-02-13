@@ -68,15 +68,22 @@ class BlogTest extends \PHPUnit_Framework_TestCase
 
         $mayPosts = $posts['2013']['05'];
 
-        touch($mayPosts[0]->source()->getRealpath());
+        foreach ($mayPosts as $post) {
+            touch($post->source()->getRealpath());
+        }
+
+        touch($mayPosts[0]->source()->getRealpath(), strtotime('+1 day'));
 
         $result = $this->Blog->getLatest();
+        $this->assertInstanceOf('\\JeremyHarris\\App\\Blog\\Post', $result);
         $expected = $mayPosts[0];
+        $this->assertEquals($expected, $result);
 
-        touch($mayPosts[1]->source()->getRealpath(), strtotime('tomorrow'));
+        touch($mayPosts[1]->source()->getRealpath(), strtotime('+2 day'));
 
         $result = $this->Blog->getLatest();
         $expected = $mayPosts[1];
+        $this->assertEquals($expected, $result);
     }
 
 }

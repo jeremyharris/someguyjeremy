@@ -169,6 +169,7 @@ class Build
         $viewContents = $view->render();
         try {
             $layout = new View($this->site . DIRECTORY_SEPARATOR . $this->layout);
+            $layout->set('title', $view->getTitle());
             $layout->set('content', $viewContents);
             $viewContents = $layout->render();
         } catch (\Exception $e) {

@@ -1,0 +1,62 @@
+@media (min-width: 768px) {
+
+	body {
+		margin-top: 70px;
+	}
+
+	header {
+		height: 70px;
+		padding-left: 20px;
+	}
+
+	header h1 {
+		position: static;
+		width: auto;
+
+		line-height: 70px;
+		font-size: 30px;
+	}
+
+	header h1 i.fa {
+		display: inline;
+	}
+
+	header h1 small {
+		font-size: 16px;
+	}
+
+	header button {
+		display: none;
+	}
+
+	nav {
+		z-index: 3;
+		display: inline-block;
+		right: 10px;
+		top: 0px;
+		left: auto;
+		padding-top: 15px;
+
+		background: transparent;
+		border: none;
+		box-shadow: none;
+
+		width: auto;
+		height: auto;
+
+		text-align: right;
+	}
+
+	nav span.divider {
+		display: inline-block;
+	}
+
+	nav a {
+		display: inline-block;
+	}
+
+	section {
+		max-width: 700px;
+	}
+
+}

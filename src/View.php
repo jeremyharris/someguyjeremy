@@ -101,4 +101,14 @@ class View
         $ext = pathinfo($this->filename, \PATHINFO_EXTENSION);
         return in_array($ext, $markdownExts);
     }
+
+    /**
+     * Gets title based on the view slug
+     *
+     * @return string
+     */
+    public function getTitle()
+    {
+        return Application::slugToTitle(basename($this->filename));
+    }
 }
