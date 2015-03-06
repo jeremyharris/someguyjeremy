@@ -1,6 +1,6 @@
 <h1>Archive</h1>
 <?php
-use JeremyHarris\App\Blog;
+use JeremyHarris\Build\Blog;
 
 $Blog = new Blog(__DIR__);
 

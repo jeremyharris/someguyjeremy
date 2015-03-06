@@ -12,6 +12,6 @@
 		}
 	},
 	"require": {
-		"league/commonmark": "~0.6"
+		"jeremyharris/build": "~0.1"
 	}
 }

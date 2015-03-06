@@ -1,5 +1,5 @@
 <?php
-use JeremyHarris\App\Blog;
+use JeremyHarris\Build\Blog;
 ?>
 <h1>Hi</h1>
 

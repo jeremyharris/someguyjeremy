@@ -1,1 +1,0 @@
-<span><?php echo isset($test) ? $test : ''; ?></span>
