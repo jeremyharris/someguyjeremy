@@ -11,7 +11,10 @@
 			"JeremyHarris\\App\\": "src/"
 		}
 	},
+	"minimum-stability": "dev",
 	"require": {
-		"jeremyharris/build": "~0.1"
+		"jeremyharris/build": "dev-develop",
+		"league/climate": "dev-master",
+		"aws/aws-sdk-php": "2.*"
 	}
 }
