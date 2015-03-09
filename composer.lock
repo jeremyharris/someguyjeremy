@@ -174,12 +174,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeremyharris/build.git",
-                "reference": "0439fb1a881486e13403a505c6e5d360ffd53aea"
+                "reference": "f8cc7805a18da7f8585e73ece7eb90486d58f45c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeremyharris/build/zipball/0439fb1a881486e13403a505c6e5d360ffd53aea",
-                "reference": "0439fb1a881486e13403a505c6e5d360ffd53aea",
+                "url": "https://api.github.com/repos/jeremyharris/build/zipball/f8cc7805a18da7f8585e73ece7eb90486d58f45c",
+                "reference": "f8cc7805a18da7f8585e73ece7eb90486d58f45c",
                 "shasum": ""
             },
             "require": {
@@ -199,7 +199,7 @@
                 "MIT"
             ],
             "description": "Static PHP website builder",
-            "time": "2015-03-06 21:21:24"
+            "time": "2015-03-09 15:58:29"
         },
         {
             "name": "league/climate",
@@ -257,12 +257,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "8a9e94c73fdc827b661ab96600c679e6d1a36f6a"
+                "reference": "69168c96d5c10e1184036f735db395059accd737"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/8a9e94c73fdc827b661ab96600c679e6d1a36f6a",
-                "reference": "8a9e94c73fdc827b661ab96600c679e6d1a36f6a",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/69168c96d5c10e1184036f735db395059accd737",
+                "reference": "69168c96d5c10e1184036f735db395059accd737",
                 "shasum": ""
             },
             "require": {
@@ -308,7 +308,7 @@
                 "markdown",
                 "parser"
             ],
-            "time": "2015-03-08 17:51:05"
+            "time": "2015-03-08 23:19:21"
         },
         {
             "name": "symfony/event-dispatcher",
