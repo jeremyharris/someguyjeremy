@@ -13,7 +13,7 @@
 	},
 	"minimum-stability": "dev",
 	"require": {
-		"jeremyharris/build": "dev-develop",
+		"jeremyharris/build": "~0.1",
 		"league/climate": "dev-master",
 		"aws/aws-sdk-php": "2.*"
 	}
