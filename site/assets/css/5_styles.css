@@ -130,14 +130,14 @@ table.header .title h1 {
 nav {
 	z-index: 1;
 	position: fixed;
-	left: -203px;
-	padding-top: 10px;
+	left: -100%;
+	top: 51px;
 
 	background: #f8f8f8;
 	box-shadow: 2px 0 2px rgba(0,0,0,.4);
 
 	height: 100%;
-	width: 200px;
+	width: calc(100% - 50px);
 
 	transition: left .3s;
 }
