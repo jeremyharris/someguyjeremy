@@ -11,7 +11,6 @@
 
 	header h1 {
 		position: static;
-		width: auto;
 
 		line-height: 70px;
 		font-size: 30px;
@@ -29,13 +28,16 @@
 		display: none;
 	}
 
+	table.header .nav {
+		width: 200px;
+	}
+
+	table.header .menu {
+		width: 0px;
+	}
+
 	nav {
-		z-index: 3;
-		display: inline-block;
-		right: 10px;
-		top: 0px;
-		left: auto;
-		padding-top: 15px;
+		position: static;
 
 		background: transparent;
 		border: none;

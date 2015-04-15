@@ -12,16 +12,28 @@
 </head>
 <body>
     <header>
-        <button><i class="fa fa-bars"></i><span class="sr-only">Menu</span></button>
-        <h1><a href="/"><i class="fa fa-terminal"></i> Jeremy Harris</a> <small>Programming is art that fights back.</small></h1>
+        <table class="header">
+            <tr>
+                <td class="menu">
+                    <button><i class="fa fa-bars"></i><span class="sr-only">Menu</span></button>
+                </td>
+                <td class="title">
+                    <h1>
+                        <a href="/"><i class="fa fa-terminal"></i> Jeremy Harris</a> <small>Programming is art that fights back.</small>
+                    </h1>
+                </td>
+                <td class="nav">
+                    <nav>
+                        <a href="/">Home</a>
+                        <span class="divider">/</span>
+                        <a href="/archive.html">Blog</a>
+                        <span class="divider">/</span>
+                        <a href="/contact.html">Contact</a>
+                    </nav>
+                </td>
+            </tr>
+        </table>
     </header>
-    <nav>
-        <a href="/">Home</a>
-        <span class="divider">/</span>
-        <a href="/archive.html">Blog</a>
-        <span class="divider">/</span>
-        <a href="/contact.html">Contact</a>
-    </nav>
     <section class="container">
         <?php echo $content; ?>
     </section>
