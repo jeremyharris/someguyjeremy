@@ -13,7 +13,7 @@
 <body>
     <header>
         <h1>
-            <a href="/"><i class="fa fa-terminal"></i> Jeremy Harris</a> <small>Programming is art that fights back.</small>
+            <a href="/"><i class="fa fa-terminal"></i> Jeremy Harris</a>
         </h1>
     </header>
     <nav>
