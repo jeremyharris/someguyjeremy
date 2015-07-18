@@ -24,18 +24,6 @@
 		font-size: 16px;
 	}
 
-	header button {
-		display: none;
-	}
-
-	table.header .nav {
-		width: 200px;
-	}
-
-	table.header .menu {
-		width: 0px;
-	}
-
 	nav {
 		position: static;
 
