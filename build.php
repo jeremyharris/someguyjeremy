@@ -67,7 +67,7 @@ if (!$climate->arguments->get('deploy')) {
 
 $builtFiles = $build->getBuiltFiles();
 
-$config = parse_ini_file('config.ini');
+$config = parse_ini_file('config/config.ini');
 
 if ($config === false) {
     $climate->error('Error parsing config.ini');
