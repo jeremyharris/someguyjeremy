@@ -91,7 +91,7 @@ class AppController extends Controller
             'authorize' => [
                 'Controller'
             ]
-        ];
+        ]);
     }
 
     public function isAuthorized($user)
