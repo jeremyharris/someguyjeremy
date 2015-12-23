@@ -24,7 +24,17 @@
         <a href="/contact.html">Contact</a>
     </nav>
     <section class="container">
-        <?php echo $content; ?>
+        <?php
+        if ($post !== false) {
+        ?>
+        <div class="date">
+            <div class="month"><?= date('M', mktime(0, 0, 0, $post->month())) ?></div>
+            <div class="year"><?= $post->year(); ?></div>
+        </div>
+        <?php
+        }
+        echo $content;
+        ?>
     </section>
     <section class="container about">
         <img src="https://secure.gravatar.com/userimage/15404927/11e72399015e42ff118efb96ddcd7749?size=250" />

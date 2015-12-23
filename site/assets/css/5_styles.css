@@ -197,6 +197,26 @@ p {
 	color: #333;
 }
 
+.date {
+	float: left;
+	background: #004976;
+	padding: 10px;
+	margin-right: 20px;
+	margin-top: 10px;
+
+	color: #fff;
+	text-align: center;
+}
+
+.date .year {
+	font-size: 90%;
+}
+
+.date .month {
+	font-size: 110%;
+	font-weight: bold;
+}
+
 section.about {
 	text-align: center;
 	padding: 20px;
