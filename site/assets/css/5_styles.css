@@ -117,7 +117,7 @@ nav a:hover {
 section.container {
 	width: 90%;
 	padding: 0 25px;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 
 	background: rgba(255,255,255,.8);
 }
@@ -195,4 +195,22 @@ p {
 .latest .month
 {
 	color: #333;
+}
+
+section.about {
+	text-align: center;
+	padding: 20px;
+	margin-bottom: 50px;
+}
+
+.about img {
+	display: inline-block;
+	max-width: 100px;
+
+	border-radius: 50%;
+}
+
+.about p {
+	text-align: left;
+	font-size: 90%;
 }

@@ -26,5 +26,18 @@
     <section class="container">
         <?php echo $content; ?>
     </section>
+    <section class="container about">
+        <img src="https://secure.gravatar.com/userimage/15404927/11e72399015e42ff118efb96ddcd7749?size=250" />
+        <p>
+            Jeremy Harris is a <span class="highlight">web developer</span> with over
+            10 years of experience. He&apos;s coded in many languages and
+            currently focuses on PHP, both agnostic and framework-based. When
+            he isn&apos;t at the keyboard, you can find him walking
+            <span class="highlight"><a href="https://twitter.com/riverthepuppy" target="_blank">@riverthepuppy</a></span>
+            or <span class="highlight">brewing</span> beer. He only talks in the
+            third person when peer pressure dictates he should, such as on his
+            blog.
+        </p>
+    </section>
 </body>
 </html>

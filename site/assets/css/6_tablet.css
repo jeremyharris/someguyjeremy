@@ -50,4 +50,17 @@
 		max-width: 700px;
 	}
 
+	.about {
+		display: table;
+	}
+
+	.about img {
+		display: table-cell;
+		margin-right: 20px;
+	}
+
+	.about p {
+		display: table-cell;
+	}
+
 }
