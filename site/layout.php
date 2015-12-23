@@ -26,6 +26,20 @@
     <section class="container">
         <?php
         if ($post !== false) {
+            $currentYear = date('Y');
+            if ($post->year() <= ($currentYear - 2)) {
+        ?>
+        <div class="alert">
+            <p>
+                This post is very old. Technology, especially open source,
+                moves very fast and it&apos;s likely that some of the information
+                could be out of date. Please take that into consideration as you
+                read this post.
+            </p>
+        </div>
+        <?php
+            }
+
         ?>
         <div class="date">
             <div class="month"><?= date('M', mktime(0, 0, 0, $post->month())) ?></div>

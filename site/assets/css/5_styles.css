@@ -234,3 +234,8 @@ section.about {
 	text-align: left;
 	font-size: 90%;
 }
+
+.alert {
+	font-style: italic;
+	color: #c7254e;
+}
