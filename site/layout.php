@@ -45,7 +45,7 @@
         <?= $content; ?>
     </section>
     <section class="container about">
-        <img src="http://www.gravatar.com/avatar/f2bbd800667efbd72f6380258ad4adfa?size=250" />
+        <img src="//www.gravatar.com/avatar/f2bbd800667efbd72f6380258ad4adfa?size=250" />
         <p>
             Jeremy Harris is a <span class="highlight">web developer</span> with over
             10 years of experience. He&apos;s coded in many languages and
