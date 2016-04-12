@@ -25,6 +25,8 @@ h4
 
 h1 {
 	border-bottom: none;
+	margin: 20px 0;
+	margin-top: 0;
 }
 
 h1 small {
@@ -117,6 +119,7 @@ nav a:hover {
 section.container {
 	width: 90%;
 	padding: 0 25px;
+	padding-top: 20px;
 	margin-bottom: 20px;
 
 	background: rgba(255,255,255,.8);
@@ -198,14 +201,18 @@ p {
 }
 
 .date {
-	float: left;
+	display: inline;
+	padding: 4px;
+	margin-top: 20px;
+	vertical-align: middle;
+
 	background: #004976;
-	padding: 10px;
-	margin-right: 20px;
-	margin-top: 10px;
+	margin-right: 10px;
 
 	color: #fff;
+	font-size: .8em;
 	text-align: center;
+	text-transform: uppercase;
 }
 
 .date .year {
@@ -215,6 +222,12 @@ p {
 .date .month {
 	font-size: 110%;
 	font-weight: bold;
+}
+
+.date + h1 {
+	display: inline;
+	margin-top: 10px;
+	vertical-align: middle;
 }
 
 section.about {

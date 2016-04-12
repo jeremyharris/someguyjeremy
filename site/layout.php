@@ -25,31 +25,23 @@
         <a href="/contact.html">Contact</a>
     </nav>
     <section class="container">
-        <?php
-        if ($post !== false) {
-            $currentYear = date('Y');
-            if ($post->year() <= ($currentYear - 2)) {
-        ?>
-        <div class="alert">
-            <p>
-                This post is very old. Technology, especially open source,
-                moves very fast and it&apos;s likely that some of the information
-                could be out of date. Please take that into consideration as you
-                read this post.
-            </p>
-        </div>
-        <?php
-            }
-
-        ?>
-        <div class="date">
-            <div class="month"><?= date('M', mktime(0, 0, 0, $post->month())) ?></div>
-            <div class="year"><?= $post->year(); ?></div>
-        </div>
-        <?php
-        }
-        echo $content;
-        ?>
+        <?php if ($post !== false): ?>
+            <?php if ($post->year() <= (date('Y') - 2)): ?>
+            <div class="alert">
+                <p>
+                    This post is very old. Technology, especially open source,
+                    moves very fast and it&apos;s likely that some of the information
+                    could be out of date. Please take that into consideration as you
+                    read this post.
+                </p>
+            </div>
+            <?php endif; ?>
+            <div class="date">
+                <span class="month"><?= date('M', mktime(0, 0, 0, $post->month())) ?></span>
+                <span class="year"><?= $post->year(); ?></span>
+            </div>
+        <?php endif; ?>
+        <?= $content; ?>
     </section>
     <section class="container about">
         <img src="http://www.gravatar.com/avatar/f2bbd800667efbd72f6380258ad4adfa?size=250" />
