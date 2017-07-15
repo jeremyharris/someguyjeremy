@@ -29,6 +29,10 @@ h1 {
 	margin-top: 0;
 }
 
+h1 code {
+    padding: .1em;
+}
+
 h1 small {
 	text-shadow: none;
 	color: #fff;
@@ -83,6 +87,14 @@ header h1 a {
 header h1 a:hover {
 	color: #fff;
 	text-decoration: none;
+}
+
+header h1 code {
+    background: none;
+    text-shadow: none;
+    padding: 0;
+    color: #000;
+    font-weight: normal;
 }
 
 nav {
