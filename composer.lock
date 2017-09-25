@@ -4,8 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "01b44844257134b1a6c7ae5684d9f065",
-    "content-hash": "88c326d67e31bd2f53c55e057d902752",
+    "content-hash": "94040e2e3a2401853dc25ec062a72218",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -84,7 +83,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle3/zipball/b3f5050cb6270c7a728a0b74ac2de50a262b3e02",
+                "url": "https://api.github.com/repos/guzzle/guzzle3/zipball/0645b70d953bc1c067bbc8d5bc53194706b628d9",
                 "reference": "0645b70d953bc1c067bbc8d5bc53194706b628d9",
                 "shasum": ""
             },
@@ -167,20 +166,21 @@
                 "rest",
                 "web service"
             ],
+            "abandoned": "guzzlehttp/guzzle",
             "time": "2015-03-18 18:23:50"
         },
         {
             "name": "jeremyharris/build",
-            "version": "0.4",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeremyharris/build.git",
-                "reference": "d567cb436e10bc35235e083f6f69e99f77713e49"
+                "reference": "f5f25601762c3b383aab2143e28723e8f3f9e464"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeremyharris/build/zipball/d567cb436e10bc35235e083f6f69e99f77713e49",
-                "reference": "d567cb436e10bc35235e083f6f69e99f77713e49",
+                "url": "https://api.github.com/repos/jeremyharris/build/zipball/f5f25601762c3b383aab2143e28723e8f3f9e464",
+                "reference": "f5f25601762c3b383aab2143e28723e8f3f9e464",
                 "shasum": ""
             },
             "require": {
@@ -200,7 +200,7 @@
                 "MIT"
             ],
             "description": "Static PHP website builder",
-            "time": "2015-12-23 19:08:11"
+            "time": "2017-07-20 01:48:59"
         },
         {
             "name": "league/climate",
@@ -212,7 +212,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/climate/zipball/e590077d1f47c19aa712434d894e9f72c6cde6c7",
+                "url": "https://api.github.com/repos/thephpleague/climate/zipball/96e2bc17937fde62512d6d25f06a01ae187632d4",
                 "reference": "96e2bc17937fde62512d6d25f06a01ae187632d4",
                 "shasum": ""
             },
@@ -262,7 +262,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/397d55997d3a5efb7050e73f734ab30285cb02ad",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/48f645369535fb86b928356fdaa0cd72ac964511",
                 "reference": "48f645369535fb86b928356fdaa0cd72ac964511",
                 "shasum": ""
             },
@@ -323,7 +323,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/7e2f9c31645680026c2372edf66f863fc7757af5",
-                "reference": "186349c2966529804e38685f671e64746dde220b",
+                "reference": "7e2f9c31645680026c2372edf66f863fc7757af5",
                 "shasum": ""
             },
             "require": {
@@ -368,7 +368,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "http://symfony.com",
-            "time": "2015-03-13 17:50:01"
+            "time": "2015-03-13T17:50:01+00:00"
         }
     ],
     "packages-dev": [
@@ -382,7 +382,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/8e884e78f9f0eb1329e445619e04456e64d8051d",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/3d9669e597439e8d205baf315efb757038fb4dea",
                 "reference": "3d9669e597439e8d205baf315efb757038fb4dea",
                 "shasum": ""
             },
@@ -486,7 +486,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/53e967bf312c21f78ec3a19c530d98e1bdb5b26f",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/07606749da971eda75434814a313ed0ce6790f6a",
                 "reference": "07606749da971eda75434814a313ed0ce6790f6a",
                 "shasum": ""
             },
@@ -641,7 +641,7 @@
                 "filesystem",
                 "iterator"
             ],
-            "time": "2013-10-10 15:34:57"
+            "time": "2013-10-10T15:34:57+00:00"
         },
         {
             "name": "phpunit/php-text-template",
@@ -685,7 +685,7 @@
             "keywords": [
                 "template"
             ],
-            "time": "2014-01-30 17:20:04"
+            "time": "2014-01-30T17:20:04+00:00"
         },
         {
             "name": "phpunit/php-timer",
@@ -729,7 +729,7 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2013-08-02 07:42:54"
+            "time": "2013-08-02T07:42:54+00:00"
         },
         {
             "name": "phpunit/php-token-stream",
@@ -920,7 +920,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/937efb279bd37a375bcadf584dec0726f84dbf22",
+                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/1dd8869519a225f7f2b9eb663e225298fade819e",
                 "reference": "1dd8869519a225f7f2b9eb663e225298fade819e",
                 "shasum": ""
             },
@@ -984,7 +984,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/13edfd8706462032c2f52b4b862974dd46b71c9e",
+                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/863df9687835c62aa423a22412d26fa2ebde3fd3",
                 "reference": "863df9687835c62aa423a22412d26fa2ebde3fd3",
                 "shasum": ""
             },
@@ -1086,7 +1086,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/f88f8936517d54ae6d589166810877fb2015d0a2",
+                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/84839970d05254c73cde183a721c7af13aede943",
                 "reference": "84839970d05254c73cde183a721c7af13aede943",
                 "shasum": ""
             },
@@ -1203,7 +1203,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/913401df809e99e4f47b27cdd781f4a258d58791",
+                "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/3989662bbb30a29d20d9faa04a846af79b276252",
                 "reference": "3989662bbb30a29d20d9faa04a846af79b276252",
                 "shasum": ""
             },
@@ -1279,7 +1279,7 @@
             ],
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
-            "time": "2014-12-15 14:25:24"
+            "time": "2014-12-15T14:25:24+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -1329,12 +1329,13 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com",
-            "time": "2015-03-24 17:09:17"
+            "time": "2015-03-24T17:09:17+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "jeremyharris/build": 20,
         "league/climate": 20
     },
     "prefer-stable": false,

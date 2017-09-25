@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>someguyjeremy.com / <?php echo $title; ?></title>
     <link rel="icon" href="/favicon.ico?_=<?php echo time(); ?>">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for someguyjeremy.com" href="/rss.xml" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#51AB55">
     <link rel="stylesheet" href="/styles.css?_=<?php echo time(); ?>">

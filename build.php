@@ -57,6 +57,7 @@ $buildPath = realpath($climate->arguments->get('build'));
 $climate->out('Building site...');
 
 $build = new JeremyHarris\Build\Build($sitePath, $buildPath);
+$build->addRss('Jeremy Harris', 'https://someguyjeremy.com', 'Personal site of Jeremy Harris. Another programmer.');
 $build->build($climate->arguments->get('force'));
 
 $climate->green('Done!');
